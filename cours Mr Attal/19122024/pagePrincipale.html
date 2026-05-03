@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Entités</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pagePrincipale.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul> 
+            <li><a href="magie.html">MAGIE</a></li>
+            <li><a href="entites.html">Gestion Entités</a></li>
+            <li><a href="proprietes.html">Gestion Propriétés</a></li>
+            <li><a href="types_proprietes.html">Gestion Types de Propriétés</a></li>
+            <li><a href="import.html">IMPORTS</a></li>
+            <li><a href="pagePrincipale.html">CODE</a></li>
+            <li><a href="TEST.html">TEST</a></li>
+        </ul>
+    </nav>
+
+    <div class="cadre_principal">
+        <div class="col_gauche">
+            <h2>Tableau des Entités</h2>
+            <table id="table_entites">
+                <thead>
+                    <tr>
+                        <th>Entité 1</th>
+                        <th>Entité 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les lignes seront ajoutées dynamiquement avec JavaScript -->
+                </tbody>
+            </table>
+            
+        </div>
+
+        <div class="col_droite">
+            <button class="bouton" onclick="sqlCreate()">SQL CREATE</button>
+            <button class="bouton" onclick="sqlSelect()">SQL SELECT</button>
+            <button class="bouton" onclick="generateHtml()">HTML</button>
+            <button class="bouton" onclick="generateHtmlWithRelation()">HTML RELATION</button>
+            <button class="bouton" onclick="generateJsCode_()">CREATION JS</button>
+            <button class="bouton" onclick="generatePhpCode()">CREATION PHP</button>
+            <textarea id="resultat" rows="10" cols="50" readonly></textarea>
+        </div>
+    </div>
+    
+    <script src="pagePrincipale.js"></script>
+    <script src="realiserJavascript.js"></script>
+    <script src="realiserPhp.js"></script>
+    
+</body>
+</html>

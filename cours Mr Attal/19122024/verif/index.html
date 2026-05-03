@@ -1,0 +1,21 @@
+<html lang="fr">
+    <meta charset="UTF-8">
+    <form onsubmit ="return verif_form();" action="C:\laragon\www\bts2\Busi\exam\dts_busi_pdo_sql.php"  method="get" id="inscription">
+        Inscris-toi:
+        <br><br> 
+        Email: <input type="text" name="mail" placeholder="Second"/><br>
+        Nom <input type="text" name="nom" placeholder="Poteau Pavard"/><br>
+        <br><br><br>
+        <input type="submit" value="Finaliser l'inscription" />
+    </form>
+    <form action="C:\laragon\www\bts2\Busi\exam\afficher_la_bdd.php">
+        <input type="submit" value="Afficher la BDD">
+    </form>
+    <form onsubmit ="return verif_form();" action="C:\laragon\www\bts2\Busi\exam\dts_busi_pdo_2.php"  method="get" id="suppression">
+        Supprimer un utilisateur:
+        <br><br> 
+        ID: <input type="number" name="idd" placeholder="42"/><br>
+        <br><br><br>
+        <input type="submit" value="Supprimer l'utilisateur avec cet ID" />
+    </form>
+</html>

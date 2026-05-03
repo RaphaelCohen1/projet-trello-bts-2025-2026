@@ -1,0 +1,24 @@
+Vagrant.configure("2") do |config|
+  # Use the official Kali Linux box
+  config.vm.box = "kalilinux/rolling"
+
+  # Set the VM's hostname
+  config.vm.hostname = "kali-vm"
+
+  # Configure a private network (optional)
+  config.vm.network "private_network", type: "dhcp"
+
+  # Provision the VM to set the root password
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "Setting root password to 'Linux1234'..."
+    echo "root:Linux1234" | chpasswd
+    echo "Password set successfully!"
+  SHELL
+
+  # Customize VirtualBox VM settings (optional)
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "Kali-Linux-VM"
+    vb.memory = "2048" # Allocate 2GB RAM
+    vb.cpus = 2        # Allocate 2 CPUs
+  end
+end

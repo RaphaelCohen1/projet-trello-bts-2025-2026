@@ -1,0 +1,296 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-magie {
+    background: linear-gradient(45deg, #e94560, #16213e);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-magie:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #e94560;
+}
+
+.navbar {
+    background: radial-gradient(circle, #1a1a2e, #16213e, #0f3460);
+   
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+   /* background: linear-gradient(45deg, #bfb1b424, #16213e);*/
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+
+    margin-right: 20px;
+}
+.navbar li a {
+    background: linear-gradient(45deg, #e94560, #16213e);
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    background: gold;
+    color: rgb(23, 58, 188);
+}
+
+
+
+
+.cadre_principal {
+    display: flex;
+    margin-top: 100px;
+}
+
+.col_gauche, .col_droite {
+    height: 600px;
+    padding: 10px;
+}
+
+.col_gauche {
+    width: 35%;
+    overflow-y: scroll;
+    background-color: #f5f5dc;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titre_entite{
+    background-color:goldenrod;
+    
+    border-radius: 15px;
+    border: solid 1px rgb(227, 131, 47);
+    align-items: center;
+    text-align: center;
+    
+    width: 300px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(164, 154, 154);
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.ligne_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alignement vertical au centre */
+    justify-content: flex-end; /* Aligne tout le contenu à droite */
+    margin-bottom: 15px; /* Espace entre les lignes du formulaire */
+}
+
+.ligne_form label {
+    width: 150px; /* Largeur fixe pour aligner les libellés */
+    text-align: right; /* Alignement à droite du texte des libellés */
+   /*font-weight: bold;*/
+    border: solid 1px goldenrod;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    margin-right: 10px; /* Espace entre le libellé et le champ */
+}
+
+.ligne_form input {
+    width: 250px; /* Largeur uniforme pour les champs de texte */
+    height: 30px;
+    padding: 8px; /* Espace intérieur pour rendre les champs plus lisibles */
+    font-weight: bold;
+    border: solid 1px chocolate;
+    border-radius: 5px;
+    font-size: 18px;
+    color:goldenrod;
+}
+
+.liste_deroulante{
+    width: 270px; /* Largeur uniforme pour les champs de texte */
+    height: 40px;
+    padding: 8px; /* Espace intérieur pour rendre les champs plus lisibles */
+    font-weight: bold;
+    border: solid 1px chocolate;
+    border-radius: 5px;
+    font-size: 18px;
+    color: goldenrod;
+}
+
+
+
+
+
+.ligne_boutons_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrer les boutons horizontalement */
+    gap: 15px; /* Espace entre les boutons */
+    margin-top: 20px; /* Espacement au-dessus de la ligne de boutons */
+}
+.bouton:hover{
+    background-color:rgb(213, 185, 75) ;
+    cursor: pointer;
+}
+.bouton{
+    width: 200px;
+    height: 60px;
+    background-color:gold ;
+    padding: 8px; /* Espace intérieur pour rendre les champs plus lisibles */
+    font-weight: bold;
+    border: solid 1px rgb(142, 66, 11);
+    border-radius: 5px;
+    font-size: 30px;
+    color: black;
+    
+}
+
+/*
+.form_type_processus input, .form_type_processus select, .form_type_processus button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+*/
+.col_droite {
+    width: 65%;
+    overflow-y: scroll;
+}
+
+.table_container {
+    height: 100%;
+    overflow-y: scroll;
+    border: solid 1px goldenrod;
+    background-color: beige;
+}
+
+.bouton_action_modif{
+    background-color: rgb(205, 142, 61);
+    color:beige;
+    font-weight: bold;
+    border: solid 1px rgb(142, 66, 11);
+    border-radius: 5px;
+    font-size: 18px;
+
+}
+.bouton_action_modif:hover{
+    background-color: rgb(202, 128, 32);
+    cursor: pointer;
+
+}
+
+.bouton_action_supprime{
+    background-color: rgb(250, 6, 6);
+    color:beige;
+    font-weight: bold;
+    border: solid 1px rgb(142, 66, 11);
+    border-radius: 5px;
+    font-size: 18px;
+
+}
+.bouton_action_supprime:hover{
+    background-color: rgb(175, 3, 3);
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid goldenrod;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: goldenrod;
+    background-color: white;
+    /*padding: 10px;*/
+}
+
+th {
+    background-color: rgb(94, 89, 89);
+    color: white;
+    padding: 10px;
+}
+
+td {
+    background-color: white;
+}
+
+/* Gestion individuelle des colonnes */
+th:nth-child(1) { /* Colonne 1 : Action */
+    width: 30px;
+}
+td:nth-child(1) { /* Colonne 1 : Action */
+    width: 30px;
+}
+
+th:nth-child(2) { /* Colonne 2 : ID */
+    width: 50px;
+}
+td:nth-child(2) { /* Colonne 2 : ID */
+    width: 50px;
+}
+th:nth-child(3) { /* Colonne 3 : Type Processus */
+    width: 400px;
+    text-align: center;
+}
+td:nth-child(3) { /* Colonne 3 : Type Processus */
+    width: 400px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+th:nth-child(4) { /* Colonne 4 : Suivi */
+    width: 50px;
+}
+td:nth-child(4) { /* Colonne 4 : Suivi */
+    width: 50px;
+}
+/* Personnalisation de la textarea */
+textarea#sql_requete {
+    width: 100%;
+    height: 300px;
+    resize: vertical; /* Permet de redimensionner verticalement */
+    font-family: monospace; /* Police pour ressembler à un éditeur de code */
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-y: auto; /* Barre de défilement verticale */
+}

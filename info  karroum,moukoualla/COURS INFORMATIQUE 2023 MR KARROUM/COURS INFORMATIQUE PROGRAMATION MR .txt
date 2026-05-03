@@ -1,0 +1,10 @@
+COURS INFORMATIQUE PROGRAMATION MR KAROUM
+
+Un ordinateur ne peut traiter que des informations binaires, c'est à dire le courant passe (information) ou passe pas.
+Un bit peut prendre la valeur 0 qui veut dire ça passe pas, 
+                               1 qui veut dire ça passe
+Pour coder, on a besoin d'un nombre de bits, lesquels seront regroupés pour former des mots.
+La taille d'un mots sera variable selon les machines; les tailles les plus courantes sont 8,16,32,64 et bientot 128,256....
+
+
+  

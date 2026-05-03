@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Entités</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="entité.html">Gestion des Entités</a></li>
+            <li><a href="proprietes.html">Gestion des Propriétés</a></li>
+            <li><a href="types_proprietes.html">Gestion des Types de Propriétés</a></li>
+            <li><a href="import.html">IMPORTS</a></li>
+            <li><a href="realisationSql.html">Réalisation SQL</a></li>
+        </ul>
+    </nav>
+
+    <div class="cadre_principal">
+        <div class="col_gauche">
+            <h2 class="titre_entite">Gestion des Entités</h2>
+            <form class="formulaire" id="Formulaire">
+                <input type="hidden" id="id_entite">
+                <div class="ligne_form">
+                    <label for="nom_entite">Nom de l'entité :</label>
+                    <input type="text" id="nom_entite" required>
+                </div>
+                <div class="ligne_form">
+                    <label for="recherche_entite">Recherche :</label>
+                    <input type="text" id="recherche_entite" placeholder="Rechercher une entité...">
+                </div>
+                <div class="ligne_boutons_form">
+                    <button class="bouton" type="button" id="rechercher">Rechercher</button>
+                </div>
+                <div class="ligne_boutons_form">
+                    <button class="bouton" type="button" id="ajouter">Ajouter</button>
+                    <button class="bouton" type="button" id="modifier">Modifier</button>
+                </div>
+            </form>
+        </div>
+        <div id="table_container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>ID</th>
+                        <th>Nom de l'entité</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="entite.js"></script>
+</body>
+</html>
