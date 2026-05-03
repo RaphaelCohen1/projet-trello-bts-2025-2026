@@ -1,0 +1,20 @@
+Pour ecrire Puissance:
+
+"Declarer une nouvelle variable"
+4 variable à declarer:1)nb((sert à avoir le nombre de depart))
+                      2)puissance((sert à exposer mon nombre))
+                      3)i((sert à definir ma puissance))
+                      4)produit((sert de resultat))
+DEBUT ALGORITHME
+produit (affecter une valeur)1
+(Afficher)"entrer un nombre entier"
+(Afficher)nb
+(Lire)nb
+(Afficher)"Puissance"
+(Lire)puissance
+(Pour) i (Allant de) 1 A puissance
+(debut Pour)
+produit(affecter une valeur)produit*nb
+(fin pour)
+(Afficher)produit
+FIN ALGORITHME

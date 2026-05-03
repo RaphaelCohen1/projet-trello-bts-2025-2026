@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prise de Rendez-vous - Agenda</title>
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    <!-- Localisation en français -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/locale/fr.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteneur du calendrier -->
+    <div class="calendar-container" id="calendarContainer">
+        <div id="calendar"></div>
+    </div>
+
+    <!-- Modal pour le formulaire de prise de rendez-vous -->
+    <div class="appointment-modal" id="appointmentModal" style="display:none;">
+        <div class="calendar-blur"></div>
+        <div class="appointment-modal-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>Réserver un Rendez-vous</h2>
+            <form id="appointment-form"  method="POST" action="process_appointment.php">
+
+                <!-- Affichage de la date sélectionnée -->
+                <p id="selectedDateText" style="margin: 10px 0; font-weight: bold; color: #1a73e8;"></p>
+
+
+                <label for="professional">Choisissez un professionnel :</label>
+                <select id="professional" name="professional" required>
+                    <option value="David Katz">David Katz</option>
+                    <option value="Anne Dupont">Anne Dupont</option>
+                    <option value="Georges Cohen">Georges Cohen</option>
+                </select>
+
+                <label for="name">Votre Nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
+
+                <label for="email">Votre E-mail :</label>
+                <input type="email" id="email" name="email" required placeholder="Entrez votre e-mail">
+
+                <label for="appointment_date">Date et Heure :</label>
+                <input type="datetime-local" id="appointment_date" name="appointment_date" required>
+
+                <button type="submit">Confirmer mon Rendez-vous</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Liste des rendez-vous confirmés -->
+    <h3>Rendez-vous Confirmés :</h3>
+    <ul id="appointmentsList"></ul>
+
+
+    <!-- Script JS 
+    <script>
+        $(document).ready(function() {
+            // Initialisation du calendrier
+            $('#calendar').fullCalendar({
+                locale: 'fr', // Affichage en français
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                selectable: true,
+                select: function(start) {
+                    // Masquer le calendrier et afficher le formulaire
+                    $('#calendarContainer').fadeOut();
+                    $('#appointmentModal').fadeIn();
+                    $('#appointment-date').val(start.format('YYYY-MM-DDTHH:mm'));
+                }
+            });
+
+            // Fermeture du modal
+            $('#closeBtn').click(function() {
+                $('#appointmentModal').fadeOut();
+                $('#calendarContainer').fadeIn();
+            });
+
+            // Soumission du formulaire de rendez-vous
+            $('#appointment-form').on('submit', function(e) {
+                e.preventDefault();
+
+                // Récupération des données
+                const professional = $('#professional').val();
+                const name = $('#name').val();
+                const email = $('#email').val();
+                const appointmentDate = $('#appointment-date').val();
+
+                // Ajouter un événement dans le calendrier
+                $('#calendar').fullCalendar('renderEvent', {
+                    title: `RDV avec ${professional}`,
+                    start: appointmentDate,
+                    color: '#f57c00'
+                });
+
+                // Ajouter le rendez-vous à la liste des confirmations
+                $('#appointmentsList').append(`
+                    <li>
+                        <strong>${professional}</strong> - ${name} (${email})<br>
+                        <em>${moment(appointmentDate).format('dddd DD MMMM YYYY, HH:mm')}</em>
+                    </li>
+                `);
+
+                // Réinitialiser le formulaire et revenir au calendrier
+                $('#appointment-form')[0].reset();
+                $('#appointmentModal').fadeOut();
+                $('#calendarContainer').fadeIn();
+            });
+        });
+    </script>-->
+    <script src="script.js"></script>
+</body>
+</html>

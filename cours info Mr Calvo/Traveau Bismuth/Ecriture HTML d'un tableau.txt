@@ -1,0 +1,26 @@
+Ecriture HTML d'un tableau
+
+</DOCTYPE>
+  <table>
+ <html>
+ <head>
+ <style>
+table,th, td {
+ border: 1px solid black;
+}
+</style>
+</head>
+
+<table>
+<tr>
+  <th><background-image> A </background-image></th>
+  <th>B</th>
+</tr>
+<tr>
+   <td>C</td>
+   <td><table>
+            <tr><td>D</td></tr>
+</td>
+</tr>
+
+</table>

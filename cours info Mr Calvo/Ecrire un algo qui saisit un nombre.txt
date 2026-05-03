@@ -1,0 +1,9 @@
+Ecrire un algo qui saisit un nombre entier et qui affiche les chiffres qui composent ce nombre
+
+EXEMPLE:123:1,2,3
+  nb=123                                                           (%Modulo)
+  nb%10=3 cela fait 123/10 ca me donne 12 il me reste 3.
+  nb=nb/10=123/10=12donc nb vaut12
+  nb%10=2
+  nb%10=1
+  nb%10=1

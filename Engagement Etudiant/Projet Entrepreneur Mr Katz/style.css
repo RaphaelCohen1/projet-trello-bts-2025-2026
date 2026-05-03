@@ -1,0 +1,121 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur du calendrier */
+.calendar-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Style du calendrier (tout en blanc maintenant) */
+#calendar {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Modal pour le formulaire de prise de rendez-vous */
+.appointment-modal {
+    display: none; /* Initialement masqué */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* S'assurer que le modal est au-dessus du calendrier */
+}
+
+/* Ajouter un flou à l'arrière-plan du calendrier quand le modal est actif */
+.appointment-modal .calendar-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px); /* Applique un flou */
+    z-index: -1; /* Pour ne pas interférer avec le formulaire */
+}
+
+/* Contenu du modal */
+.appointment-modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 600px; /* Agrandir le modal */
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.appointment-modal h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+.appointment-modal input,
+.appointment-modal select,
+.appointment-modal button {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.appointment-modal input:focus,
+.appointment-modal select:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+.appointment-modal button {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    padding: 15px;
+}
+
+.appointment-modal button:hover {
+    background-color: #1558b0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}

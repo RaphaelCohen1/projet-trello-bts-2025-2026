@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .logo-text {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-links a.active {
+    color: #e53935;
+  }
+  
+  /* BOUTON CENTRÉ */
+  .don-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+  }
+  
+  .don-btn {
+    padding: 14px 24px;
+    background: linear-gradient(to right, #e53935, #ff7043);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+  }
+  
+  .don-btn:hover {
+    transform: scale(1.05);
+  }

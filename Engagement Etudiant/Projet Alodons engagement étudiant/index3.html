@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de Don</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; /* <- ICI changement important */
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .section-1 h2 {
+            color: #ff6200;
+        }
+        .section-2 h2 {
+            color: #ff6200;
+        }
+        .section-3 h2 {
+            color: #ff6200;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            margin-left: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            border-bottom: 1px solid #ddd;
+            background-color: white;
+            position: sticky;  /* facultatif */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+           height: 50px;
+        }
+
+        .logo-text {
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a.active {
+            color: #e53935;
+        }
+
+        .radio-group, .checkbox-group {
+            margin: 10px 0;
+        }
+        .radio-group label, .checkbox-group label {
+            margin-right: 15px;
+        }
+        .amount-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .amount-buttons button {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .amount-buttons button:hover {
+            background-color: #f0f0f0;
+        }
+        .amount-buttons button.active {
+            background-color: #4CAF50;
+            color: white;
+            border-color: #4CAF50;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+        .payment-method {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .payment-method img {
+            width: 50px;
+        }
+        .comment-box {
+            margin-top: 10px;
+        }
+        .comment-box textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+          <img src="./image/logoohr-hanna.png" alt="Logo Ohr Hanna">
+          <div class="logo-text">
+            <strong>Ohr Hanna</strong><br>
+            <small>Association humanitaire juive de France<br>depuis 1984</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="./index.html" class="active">Accueil</a>
+          <div class="dropdown"><a href="#">Nous connaître</a></div>
+          <a href="#">Devenir bénévole</a>
+          <div class="dropdown"><a href="#">Agir avec nous</a></div>
+          <a href="#">Contactez-nous</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Section 1: Mon soutien -->
+        <div class="section section-1">
+            <h2>1. Mon soutien</h2>
+            <div class="radio-group">
+                <label><input type="radio" name="frequency" value="one-time" checked> Une fois</label>
+                <label><input type="radio" name="frequency" value="monthly"> Chaque mois</label>
+            </div>
+            <div class="amount-buttons">
+                <button onclick="selectAmount(10)">10 €</button>
+                <button onclick="selectAmount(20)">20 €</button>
+                <button onclick="selectAmount(50)">50 €</button>
+                <button onclick="selectAmount(100)">100 €</button>
+            </div>
+            <p>Après déduction fiscale, votre don ne vous coûte que : <span id="after-deduction">8 €</span></p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="gift"> Souhaitez-vous préciser le motif de don ?</label>
+            </div>
+        </div>
+
+        <!-- Section 2: Mes coordonnées -->
+<div class="section section-2">
+    <h2>2. Mes coordonnées</h2>
+    <p>Les informations suivantes nous permettent de vous adresser un reçu fiscal et de mieux gérer votre don.</p>
+    <div class="radio-group">
+        <label><input type="radio" name="type" value="individual" checked> Particulier</label>
+        <label><input type="radio" name="type" value="company"> Entreprise</label>
+    </div>
+    <div class="input-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" required>
+    </div>
+    <div class="input-group">
+        <label for="civility">Civilité *</label>
+        <select id="civility" required>
+            <option value="">Sélectionner</option>
+            <option value="mr">Monsieur</option>
+            <option value="mrs">Madame</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="last-name">Nom *</label>
+        <input type="text" id="last-name" required>
+    </div>
+    <div class="input-group">
+        <label for="first-name">Prénom *</label>
+        <input type="text" id="first-name" required>
+    </div>
+    <div class="checkbox-group">
+        <label><input type="checkbox" id="anonymous"> Faire un don anonyme</label>
+    </div>
+
+    <!-- Consentement RGPD -->
+    <div class="checkbox-group">
+        <label>
+            <input type="checkbox" id="consent" required>
+            J'accepte que mes données soient utilisées dans le cadre de la gestion des dons de l'association, conformément à la politique de confidentialité.
+        </label>
+    </div>
+</div>
+        <!-- Section 3: Mode de règlement -->
+        <div class="section section-3">
+            <h2>3. Mon règlement</h2>
+            <div class="payment-method">
+                <label>Méthode de paiement</label>
+                <div>
+                    <input type="radio" name="payment" value="card" checked> Carte Bancaire
+                    <img src="#" alt="Carte Bancaire">
+                </div>
+                <div>
+                    <input type="radio" name="payment" value="paypal"> PayPal
+                    <img src="#" alt="PayPal">
+                </div>
+            </div>
+            <div class="comment-box">
+                <label for="comment">Commentaire</label>
+                <textarea id="comment" rows="3" placeholder="Nom qui apparaîtra"></textarea>
+            </div>
+            <button class="submit-btn" id="valider-don" onclick="submitForm()">Valider mon don</button>
+        </div>
+    </div>
+
+    <script>
+        function selectAmount(amount) {
+            const buttons = document.querySelectorAll('.amount-buttons button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.textContent) === amount) {
+                    btn.classList.add('active');
+                }
+            });
+
+            const deduction = amount * 0.8;
+            document.getElementById('after-deduction').textContent = `${deduction} €`;
+        }
+
+        function submitForm() {
+            const email = document.getElementById('email').value;
+            const civility = document.getElementById('civility').value;
+            const lastName = document.getElementById('last-name').value;
+            const firstName = document.getElementById('first-name').value;
+            const consent = document.getElementById('consent').checked;
+
+            if (!email || !civility || !lastName || !firstName) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+            alert('Don validé avec succès !');
+            if (!consent) {
+                alert("Vous devez accepter le consentement pour continuer.");
+                return;
+            }
+        }
+
+        // Initialize default amount
+        selectAmount(10);
+    </script>
+</body>
+</html>

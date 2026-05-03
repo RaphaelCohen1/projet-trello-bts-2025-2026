@@ -1,0 +1,22 @@
+Pour ecrire une Boucle
+
+- Demander  deux variables (ecrite logiquement avec ce qu'on veut)
+Debuter l'algorythme
+- Pour "i" allant de 1à3 (ou "i" est un tour)
+"Pour...De...A"
+Debut Pour:. Afficher Message
+           . Lire variable
+"Si"(A<=B)Alors
+Debut Si: .Afficher
+          
+Fin si
+
+"Sinon"
+Debut Sinon: .Afficher
+Fin du Sinon
+Fin du Pour
+FIN ALGORYTHME
+
+
+
+

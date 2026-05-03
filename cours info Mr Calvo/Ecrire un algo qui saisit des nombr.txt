@@ -1,0 +1,27 @@
+Ecrire un algo qui saisit des nombres entiers et qui affiche si ce nombre est pair ou impair l'algo s'arrete dès que le nombre entier est négatif.
+
+NB
+-
+- }INSTRUCTIONS "afficher entrer un nombre entier" et "lire"
+-
+VARIABLES
+ NOMBRE ENTIER est du type NOMBRE
+DEBUT ALGORYTHME
+AFFICHER "Entrer un nombre"
+LIRE NOMBRE ENTIER
+TANT QUE (NOMBRE ENTIER>=0) FAIRE
+DEBUT TANT QUE 
+SI (NOMBRE ENTIER%2==0)ALORS SINON
+DEBUT_SI
+       -AFFICHER "Le nombre est impaire"
+FIN_SI
+SINON
+DEBUT_SINON
+          -AFFICHER"Le nombre est impaire"
+FIN_SINON
+AFFICHER"Entrer un autre nombre"
+LIRE nb
+FIN_TANT_QUE
+EX: NB=5 alors il affichera les "-"
+                                 -
+                                 -

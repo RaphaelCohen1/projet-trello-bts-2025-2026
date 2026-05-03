@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire un don</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+          <img src="./image/logoohr-hanna.png" alt="Logo Ohr Hanna">
+          <div class="logo-text">
+            <strong>Ohr Hanna</strong><br>
+            <small>Association humanitaire juive de France<br>depuis 1984</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="./index.html" class="active">Accueil</a>
+          <div class="dropdown"><a href="#">Nous connaître</a></div>
+          <a href="#">Devenir bénévole</a>
+          <div class="dropdown"><a href="#">Agir avec nous</a></div>
+          <a href="#">Contactez-nous</a>
+        </nav>
+    </header>
+    
+    <div id="conteneur">
+        <section id="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="Vidéo de l'asso" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </section>
+
+        <section id="don">
+            <h2>Or 'Hanna</h2>
+            
+            <div id="montants-suggérés">
+                <button data-montant="50">50€</button>
+                <button data-montant="10">10€</button>
+                <button data-montant="200">200€</button>
+                <button data-montant="500">500€</button>
+            </div>
+
+            <div id="montant-personnalisé">
+                <label for="autre-montant">Autre montant :</label>
+                <input type="number" id="autre-montant" name="autre-montant" placeholder="Entrez un montant" />
+            </div>
+
+            <div id="fréquence">
+                <input type="radio" id="une-fois" name="fréquence" value="une-fois">
+                <label for="une-fois">Je donne en une fois</label><br>
+
+                <input type="radio" id="répéter" name="fréquence" value="répéter">
+                <label for="répéter">Je répète mon don</label>
+            </div>
+
+            <a href="index3.html">Faire votre don</a>
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

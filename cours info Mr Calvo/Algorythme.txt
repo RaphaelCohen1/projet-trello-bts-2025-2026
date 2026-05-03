@@ -1,0 +1,27 @@
+Algorithme 
+
+Saisir un nombre entier nb. Tant que ce nombre est >0.Si ce nombre est pair alors nb=nb+3
+
+Sinon nb=3*nb
+
+((VARIABLE))nb "est du type" nombre
+            i "est du type" nombre
+((DEBUT ALGORYTHME))
+"AFFICHER" entrer un nombre entier
+"LIRE"nb
+i"PREND_LA_VALEUR"1
+((TANT QUE ((nb>0))FAIRE))
+((DEBUT DU TANT QUE))
+((SI (nb%2==0) ALORS))
+((DEBUT_SI))
+nb "PREND_LA_VALEUR"nb+3 [car nb est pair]
+((FIN_SI))
+((SINON))
+((DEBUT_SINON))
+nb"PREND LA VALEUR"3*nb
+((FIN_SINON))
+"AFFICHER"nb
+i "PREND_LA_VALEUR"i+1
+((FIN TANT QUE))
+((FIN ALGORYTME))
+

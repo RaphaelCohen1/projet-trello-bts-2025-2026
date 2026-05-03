@@ -1,0 +1,77 @@
+COURS INFORMATIQUE/ECRITURE D'UN PROGRAMME; Mr Calvo
+5 INSTRUCTIONS DE BASE
+
+1) Affectation
+   nom variable=valeur
+Ex nb= 5 
+2) -si condition est vrai alors
+          effectuer instruction
+   sinon effectuer d'autre instruction.
+
+   - 
+3)TANT QUE CONDITION EST VRAI = FAIRE
+           effectuer instruction
+          -
+          -
+          -
+4)Affiche à l'écran 
+
+5) Lire (nom d'une variable)
+ex: Lire (nb)
+
+EXERCICE
+Ecrire un algoritme qui demande à saisir un nombre représantant un age et d'afficher le message "tu est un enfant" si l'age est compris entre 1 et 10.
+Le message "tu est un ado" si l'age est compris entre 11 et 17
+Le message "tu est un adulte" si l'age est superieur à 18.
+
+Algorithme Age
+     Age: Entier 
+     Debut
+     Nouvelle ligne
+         Afficher ("entrer votre age")
+    Nouvelle ligne
+         Lire(age)
+   Nouvelle ligne
+         Si ((age >=1 et age < = 10)) }c'est la Condition Total
+                F   et  V = FAUX
+                V   et  F = FAUX
+   ALORS
+    DEBUT _SI
+         Afficher message ("tu es un enfant")
+    FIN_SI
+         Sinon 
+    DEBUT SINON
+         Si age >= 11 et 
+            age < 18 Alors 
+    DEBUT SI
+            Afficher ("tu es un ado")
+    FIN SI
+   SINON
+   DEBUT SINON
+         Sinon Afficher ("tu es un adulte") 
+   FIN SINON
+
+
+Ecrire un algoritme qui saisit un nombre entier et qui affiche ("impaire") si ce nombre est impaire, et affiche ("paire") sinon 
+
+Modulo: = reste de la division entière
+                      Algo pair/impaire
+                      nb: ENTIER
+                      reste: ENTIER
+                      DEBUT
+                          Afficher ("Entrer un nombre entier")
+                          LIRE(nb)
+                          reste= nb%2}0
+Si reste<= 0 Alors afficher ("pair")
+Sinon impaire.
+Fin
+
+
+nb =123
+reste = nb%10
+Si reste ==0 ou reste ==2 etc...Alors "paire"sinon"impaire".
+
+Algorytme du modulo:
+ 7modulo2=1
+utiliser un "for" pour convertir en binaire.
+         
